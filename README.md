@@ -2,6 +2,12 @@
 
 This example shows DevExtreme FileManager, which is bound to a default file sytem provider. The [page handler methods](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-3.1&tabs=visual-studio#multiple-handlers-per-page) work as backend here. 
 
+*Files to look at*:
+
+* [Index.cshtml](./CS/T846603/Pages/Index.cshtml)
+* [Index.cshtml.cs](./CS/T846603/Pages/Index.cshtml.cs)
+* [_Layout.cshtml](./CS/T846603/Pages/Shared/_Layout.cshtml)
+
 > **Note** The project targets .NET Core 3.0. To run the project in Visual Studio 2017, change the target framework in the project settings.
 
 ## Implementation:
@@ -28,8 +34,4 @@ public IActionResult OnPostDocuments(FileSystemCommand c, string a) => ProcessFi
 ```
 5) Disable AntiForgeryToken in the Razor Page with File Manager via [IgnoreAntiforgeryTokenAttribute](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.ignoreantiforgerytokenattribute?view=aspnetcore-3.1). 
 
-*Files to look at*:
 
-* [Index.cshtml](./CS/T846603/Pages/Index.cshtml)
-* [Index.cshtml.cs](./CS/T846603/Pages/Index.cshtml.cs)
-* [_Layout.cshtml](./CS/T846603/Pages/Shared/_Layout.cshtml)
