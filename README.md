@@ -8,7 +8,7 @@ This example shows DevExtreme FileManager, which is bound to a default file syte
 * [Index.cshtml.cs](./CS/T846603/Pages/Index.cshtml.cs)
 * [_Layout.cshtml](./CS/T846603/Pages/Shared/_Layout.cshtml)
 
-> **Note** The project targets .NET Core 3.0. To run the project in Visual Studio 2017, change the target framework in the project settings.
+> **Note** The project targets .NET Core 3.1. To run the project in Visual Studio 2017, change the target framework in the project settings.
 
 ## Implementation:
 
@@ -17,7 +17,7 @@ This example shows DevExtreme FileManager, which is bound to a default file syte
 2) Add File Manager control to your Razor Page and use the Remote provider.
 ```cs
 @(Html.DevExtreme().FileManager()
-    .FileProvider(provider =>
+    .FileSystemProvider(provider =>
         provider.Remote()
         .Url(Url.Page("Index", "Documents")))
 ```
@@ -27,7 +27,7 @@ This example shows DevExtreme FileManager, which is bound to a default file syte
 public IActionResult OnGetDocuments(FileSystemCommand c, string a) => ProcessFileApiRequest(c, a);
 public IActionResult OnPostDocuments(FileSystemCommand c, string a) => ProcessFileApiRequest(c, a);
 ```
-4) Process requests with IFileProvider like in the [Physical File System](https://demos.devexpress.com/ASPNetCore/Demo/FileManager/BindingToFileSystem/) demo. Since all data operations except Download return JSON data, return the result in the handler as follows:
+4) Process requests with PhysicalFileSystemProvider like in the [Physical File System](https://demos.devexpress.com/ASPNetCore/Demo/FileManager/BindingToFileSystem/) demo. Since all data operations except Download return JSON data, return the result in the handler as follows:
 
 ```cs
  return command == FileSystemCommand.Download ? (IActionResult)result : new JsonResult(result);
