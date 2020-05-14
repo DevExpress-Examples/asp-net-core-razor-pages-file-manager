@@ -25,15 +25,15 @@ namespace T846603.Pages {
             string documentsRoot = $"{_env.WebRootPath }\\Pictures";
             var config = new FileSystemConfiguration {
                 Request = Request,
-                FileSystemProvider = new DefaultFileProvider(documentsRoot),
+                FileSystemProvider = new PhysicalFileSystemProvider(documentsRoot),
                 AllowDownload = true,
                 AllowCopy = true,
                 AllowCreate = true,
                 AllowMove = true,
-                AllowRemove = true,
+                AllowDelete = true,
                 AllowRename = true,
                 AllowUpload = true,
-                UploadTempPath = $"{_env.ContentRootPath}\\UploadTemp"
+                TempDirectory = $"{_env.ContentRootPath}\\UploadTemp"
             };
             var processor = new FileSystemCommandProcessor(config);
             var result = processor.Execute(command, arguments).GetClientCommandResult();
