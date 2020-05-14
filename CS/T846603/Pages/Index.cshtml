@@ -4,7 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 @(Html.DevExtreme().FileManager()
-    .FileProvider(provider =>
+    .FileSystemProvider(provider =>
         provider.Remote()
         .Url(Url.Page("Index", "Documents")))
     .Permissions(permissions => {
@@ -12,7 +12,7 @@
         permissions.Copy(true);
         permissions.Create(true);
         permissions.Move(true);
-        permissions.Remove(true);
+        permissions.Delete(true);
         permissions.Rename(true);
         permissions.Upload(true);
     })
