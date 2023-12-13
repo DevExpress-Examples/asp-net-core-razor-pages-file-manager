@@ -18,20 +18,20 @@ This example demonstrates DevExtreme [FileManager](https://docs.devexpress.com/A
             .Url(Url.Page("Index", "Documents")))
     ```
 
-3. File Manager uses both `GET` and `POST` requests, so it's necessary to create handlers for both request types.
+3. File Manager uses both `GET` and `POST` requests, so it is necessary to create handlers for both request types.
 
     ```cs
     public IActionResult OnGetDocuments(FileSystemCommand c, string a) => ProcessFileApiRequest(c, a);
     public IActionResult OnPostDocuments(FileSystemCommand c, string a) => ProcessFileApiRequest(c, a);
     ```
-4. Process requests with [PhysicalFileSystemProvider](https://docs.devexpress.com/AspNetCore/DevExtreme.AspNet.Mvc.FileManagement.PhysicalFileSystemProvider) like it is demonstrated in the following demo: [Physical File System](https://demos.devexpress.com/ASPNetCore/Demo/FileManager/BindingToFileSystem/).
+4. Process requests with [PhysicalFileSystemProvider](https://docs.devexpress.com/AspNetCore/DevExtreme.AspNet.Mvc.FileManagement.PhysicalFileSystemProvider) as demonstrated in the following demo: [Physical File System](https://demos.devexpress.com/ASPNetCore/Demo/FileManager/BindingToFileSystem/).
   
     All data operations except **Download** return JSON data. Return the result in the handler as follows:
     
     ```cs
     return command == FileSystemCommand.Download ? (IActionResult)result : new JsonResult(result);
     ```
-5. Use the [IgnoreAntiforgeryTokenAttribute](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.ignoreantiforgerytokenattribute?view=aspnetcore-3.1) object to disable `AntiForgeryToken` in the Razor Page with File Manager. 
+5. Use the [IgnoreAntiforgeryTokenAttribute](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.mvc.ignoreantiforgerytokenattribute?view=aspnetcore-3.1) object to disable `AntiForgeryToken` on the Razor Page with File Manager.
 
 ## Files to Review
 
