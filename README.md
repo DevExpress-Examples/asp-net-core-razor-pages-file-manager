@@ -4,7 +4,8 @@
 <!-- default badges end -->
 # File Manager for ASP.NET Core - How to use file manager in ASP.NET Core Razor Pages
 
-This example demonstrates DevExtreme [FileManager](https://docs.devexpress.com/AspNetCore/401320/devextreme-based-controls/controls/file-manager) control bound to a default file sytem provider. The [page handler methods](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-3.1&tabs=visual-studio#multiple-handlers-per-page) work as backend. 
+This example demonstrates the DevExtreme [FileManager](https://docs.devexpress.com/AspNetCore/401320/devextreme-based-controls/controls/file-manager) control bound to a default file system provider. The [page handler methods](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-3.1&tabs=visual-studio#multiple-handlers-per-page) work on the backend. 
+
 
 ## Implementation Details
 
