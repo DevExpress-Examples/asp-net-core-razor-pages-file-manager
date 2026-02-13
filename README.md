@@ -42,7 +42,7 @@ This example demonstrates the DevExtreme [FileManager](https://docs.devexpress.c
 * [Index.cshtml.cs](./CS/T846603/Pages/Index.cshtml.cs)
 * [_Layout.cshtml](./CS/T846603/Pages/Shared/_Layout.cshtml)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-core-razor-pages-file-manager&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=asp-net-core-razor-pages-file-manager&~~~was_helpful=no)
 
